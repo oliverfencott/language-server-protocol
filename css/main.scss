@@ -11,7 +11,8 @@ html {
 body {
 	letter-spacing: .25px;
 	text-rendering: optimizeLegibility;
-	color: #242628;
+	color: #e9ecef;
+	background-color: #1d1e1f;
 }
 
 a {
@@ -65,7 +66,7 @@ table.table-responsive.table-bordered {
 			position: -o-sticky;
 			top: 3rem; // 2.5rem for the header's height + padding,
 			           // +.5rem for the tr's own padding
-			background: #fff;
+			background: #1d1e1f;
 			outline: 1px solid #e9ecef;
 		}
 	}
@@ -100,10 +101,10 @@ pre[class=highlight] {
 	overflow: auto;
 	font-size: 85%;
 	line-height: 1.45;
-	background-color: #f6f8fa;
+	background-color: #1d1e1f;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	background: #f6f8fa
+	background: #1d1e1f;
 }
 
 .highlight .hll {
@@ -375,8 +376,8 @@ pre[class=highlight] {
 
 .footer {
 	padding: 15px 0;
-	color: #000;
-	background: #e9ecef;
+	color: #e9ecef;
+	background: #1d1e1f;
 
 	@media (min-width: 576px) {
 		padding: 50px 0;
@@ -459,6 +460,7 @@ pre[class=highlight] {
 
 .lsp-sidebar .card {
 	padding-top: 1px;
+	background-color: #212529;
 }
 
 .navbar-brand h1 {
