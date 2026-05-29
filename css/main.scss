@@ -111,6 +111,10 @@ pre[class=highlight] {
 	background: #1d1e1f;
 }
 
+pre code {
+	color: unset !important;
+}
+
 .highlight .hll {
 	background-color: #EFEFEF
 }
