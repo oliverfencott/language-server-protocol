@@ -473,6 +473,10 @@ pre[class=highlight] {
     color: rgba(255, 255, 255, 0.75);
 }
 
+code {
+	background-colour: transparent !important;
+}
+
 code.highlighter-rouge a {
 	color: #bd4147;
 	font-weight: bold;
