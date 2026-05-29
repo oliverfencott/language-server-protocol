@@ -10,7 +10,7 @@ fullTitle: Language Server Index Format Specification - 0.4.0
 
 ## <a href="#lsifIntro" name="lsifIntro" class="anchor">Language Server Index Format</a>
 
-The purpose of the Language Server Index Format (LSIF) is it to define a standard format for language servers or other programming tools to dump their knowledge about a workspace. This dump can later be used to answer language server [LSP](https://microsoft.github.io/language-server-protocol/) requests for the same workspace without running the language server itself. Since much of the information would be invalidated by a change to the workspace, the dumped information typically excludes requests used when mutating a document. So, for example, the result of a code complete request is typically not part of such a dump.
+The purpose of the Language Server Index Format (LSIF) is it to define a standard format for language servers or other programming tools to dump their knowledge about a workspace. This dump can later be used to answer language server [LSP](/language-server-protocol/) requests for the same workspace without running the language server itself. Since much of the information would be invalidated by a change to the workspace, the dumped information typically excludes requests used when mutating a document. So, for example, the result of a code complete request is typically not part of such a dump.
 
 ### Changelog
 
@@ -25,21 +25,21 @@ Since 0.4.0 changes some of the LSIF aspects more deeply an old 0.3.x version of
 Principal design goals:
 
 - The format should not imply the use of a certain persistence technology.
-- The data defined should be modeled as closely as possible to the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) to make it possible to serve the data through the LSP without further transformation.
+- The data defined should be modeled as closely as possible to the [Language Server Protocol](/language-server-protocol/) to make it possible to serve the data through the LSP without further transformation.
 - The data stored is result data usually returned from a LSP request. The dump doesn't contain any program symbol information nor does the LSIF define any symbol semantics (e.g. where a symbol is defined or referenced or when a method overrides another method). The LSIF therefore doesn't define a symbol database. Please note that this is consistent with the LSP itself which doesn't define any symbol semantics either.
 - The output format will be based on JSON as with the LSP.
 
 LSP requests that are good candidates to be supported in LSIF are:
 
-- [`textDocument/documentSymbol`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_documentSymbol)
-- [`textDocument/foldingRange`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_foldingRange)
-- [`textDocument/documentLink`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_documentLink)
-- [`textDocument/definition`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_definition)
-- [`textDocument/declaration`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_declaration)
-- [`textDocument/typeDefinition`](https://microsoft.github.io/language-server-protocol/specifications/specification-current#textDocument_typeDefinition)
-- [`textDocument/hover`](https://microsoft.github.io/language-server-protocol/specifications/specification-3-15#textDocument_hover)
-- [`textDocument/references`](https://microsoft.github.io/language-server-protocol/specifications/specification-3-15#textDocument_references)
-- [`textDocument/implementation`](https://microsoft.github.io/language-server-protocol/specifications/specification-3-15#textDocument_implementation)
+- [`textDocument/documentSymbol`](/language-server-protocol/specifications/specification-current#textDocument_documentSymbol)
+- [`textDocument/foldingRange`](/language-server-protocol/specifications/specification-current#textDocument_foldingRange)
+- [`textDocument/documentLink`](/language-server-protocol/specifications/specification-current#textDocument_documentLink)
+- [`textDocument/definition`](/language-server-protocol/specifications/specification-current#textDocument_definition)
+- [`textDocument/declaration`](/language-server-protocol/specifications/specification-current#textDocument_declaration)
+- [`textDocument/typeDefinition`](/language-server-protocol/specifications/specification-current#textDocument_typeDefinition)
+- [`textDocument/hover`](/language-server-protocol/specifications/specification-3-15#textDocument_hover)
+- [`textDocument/references`](/language-server-protocol/specifications/specification-3-15#textDocument_references)
+- [`textDocument/implementation`](/language-server-protocol/specifications/specification-3-15#textDocument_implementation)
 
 The corresponding LSP requests have one of the following two forms:
 
@@ -803,7 +803,7 @@ export interface Project extends V {
 
 	/**
 	 * The project kind like 'typescript' or 'csharp'. See also the language ids
-	 * in the [specification](https://microsoft.github.io/language-server-protocol/specification)
+	 * in the [specification](/language-server-protocol/specification)
 	 */
 	kind: string;
 
