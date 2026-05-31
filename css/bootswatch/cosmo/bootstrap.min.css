@@ -939,6 +939,7 @@ pre code {
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%
+	overflow-wrap: anywhere;
 }
 
 .order-first {
